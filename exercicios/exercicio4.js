@@ -9,18 +9,27 @@ Código Condição de Pagamento
 
  */
 
-const precoDaEtiqueta = 100
-const formaDePagamento = 4
+function aplicarDesconto(valor,desconto){
+    return valor - (valor*(desconto/100))
+}
+
+function aplicarJuros(valor,juros){
+    return valor + (valor*(juros/100))
+}
+
+const precoDaEtiqueta = 100;
+const formaDePagamento = 4;
 
 if (formaDePagamento === 1 ){
-    console.log=(precoDaEtiqueta - (precoDaEtiqueta*0.1))
+    console.log(aplicarDesconto(precoDaEtiqueta,10));
 
 } else if(formaDePagamento===2){
-    console.log=(precoDaEtiqueta - (precoDaEtiqueta*0.15))
+    console.log(aplicarDesconto(precoDaEtiqueta,15));
 
 }else if (formaDePagamento===3){
-    console.log(precoDaEtiqueta)
+    console.log(precoDaEtiqueta);
 
 }else{
-    console.log(precoDaEtiqueta+(precoDaEtiqueta*0.1))
+    console.log(aplicarJuros(precoDaEtiqueta,10));
 }
+ 
