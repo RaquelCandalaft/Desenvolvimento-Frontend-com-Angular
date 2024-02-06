@@ -6,6 +6,7 @@ class Pessoa{
     constructor(nome,idade){
         this.nome = nome;
         this.idade = idade;
+        this.anoDeNascimento = 2024 - idade;
     }
 
     descrever(){
@@ -13,16 +14,6 @@ class Pessoa{
     }
 }
 
-const vitor = new Pessoa();
-vitor.nome = 'Vitor Guerra';
-vitor.idade = 25;
-
-const renan = new Pessoa();
-renan.nome = 'Renan Silva';
-renan.idade = 30;
+const vitor = new Pessoa('Vitor',27);
 
 console.log(vitor);
-console.log(renan);
-
-vitor.descrever();
-renan.descrever();
